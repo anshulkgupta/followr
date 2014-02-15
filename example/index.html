@@ -76,7 +76,7 @@
         if (response.authResponse) {
           location.reload();
         } else {
-          // User cancelled login or did not fully authorize
+          alert('error');// User cancelled login or did not fully authorize
         }
       }, {scope: 'user_groups'});
     });
