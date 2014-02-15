@@ -1,8 +1,18 @@
 <html>
 <head>
-  <link type="text/css" href="https://github.com/codersgrave/Facebook-Friend-Selector/css/friend-selector/jquery.friend.selector-1.2.1.css" rel="stylesheet" />
+<link type="text/css" href="/friend-selector/jquery.friend.selector-1.2.1.css" rel="stylesheet" s/>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript" src="https://github.com/codersgrave/Facebook-Friend-Selector/js/friend-selector/jquery.friend.selector-1.2.1.js"></script>
+<script type="text/javascript" src="/friend-selector/jquery.friend.selector-1.2.1.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    $(".bt-fs-dialog").fSelector({
+      onSubmit: function(response){
+        // example response usage
+        alert(response);
+      }
+    });
+  });
+</script>
 </head>
 <body>
 <a href="javascript:{}" class="bt-fs-dialog">Click here</a>
@@ -14,6 +24,7 @@
     status     : true, // check login status
     cookie     : true, // enable cookies to allow the server to access the session
     xfbml      : true  // parse XFBML
+    channelUrl  : '/example/channel.html', // Channel File
   });
 
   // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
@@ -71,16 +82,5 @@
   present a graphical Login button that triggers the FB.login() function when clicked. -->
 
 <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-
-<script type="text/javascript">
-  jQuery(document).ready(function($) {
-    $(".bt-fs-dialog").fSelector({
-      onSubmit: function(response){
-        // example response usage
-        alert(response);
-      }
-    });
-  });
-</script>
 </body>
 </html>
