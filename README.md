@@ -6,4 +6,4 @@ Simply login using Facebook, choose a friend and sign up for voice/text alerts w
 
 DISCLAIMER : Use at your own risk. Please be discreet with the use of this poweful tool. As they say, "With great power comes great responsibility"!
 
-Created by: Anshul Gupta and Mayank Mahajan.
+Created by: Anshul Gupta and Mayank Mahajan. Hacked in 48 hours at PennApps Spring '14.
