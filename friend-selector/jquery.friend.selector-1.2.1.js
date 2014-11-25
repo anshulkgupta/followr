@@ -63,33 +63,11 @@
       selected_friends.push(parseInt($(this).val().split('-')[1], 10));
     });
 
-    if ( fsOptions.facebookInvite === true ){
-      
-      var friends = selected_friends.join();
-
-      FB.ui({
-        method: 'apprequests',
-        message: fsOptions.lang.facebookInviteMessage,
-        to: friends
-      },function(response){
-
-        if ( response !== null ){
-          fsOptions.onSubmit(selected_friends);
-
-          if ( fsOptions.closeOnSubmit === true ) {
-            _close();
-          }
-        }
-
-      });
-    }
-    else{
-      fsOptions.onSubmit(selected_friends);
+    fsOptions.onSubmit(selected_friends);
 
       if ( fsOptions.closeOnSubmit === true ) {
         _close();
       }
-    }
 
   },
 
@@ -571,7 +549,7 @@
     enableEscapeButton: true,
     overlayOpacity: "0.3",
     overlayColor: '#000',
-    closeOnSubmit: false,
+    closeOnSubmit: true,
     showSelectedCount: true,
     showButtonSelectAll: true,
     addUserGroups: false,
@@ -594,7 +572,7 @@
     },
     maxFriendsCount: null,
     showRandom: false,
-    facebookInvite: true,
+    facebookInvite: false,
     onPreStart: function(response){ return null; },
     onStart: function(response){ return null; },
     onClose: function(response){ return null; },
